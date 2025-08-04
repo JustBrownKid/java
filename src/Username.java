@@ -14,13 +14,13 @@ public class Username {
         }
         public static String getInitials(String name){
             String[] words = name.split(" ");
-            String inteintial = "";
+            StringBuilder inteintial = new StringBuilder();
             for (int i = 0 ; i<2 &&  i <words.length ; i++){
                 String word = words[i];
                 if (!word.isEmpty()) {
-                    inteintial += (word.charAt(0));
+                    inteintial.append(word.charAt(0));
                 }
             }
-            return inteintial.toUpperCase();
+            return inteintial.toString().toUpperCase();
         }
     }
